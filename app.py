@@ -1,7 +1,9 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 from openai import OpenAI
 
 app = Flask(__name__)
+CORS(app)
 
 client = OpenAI(
     base_url="http://127.0.0.1:8080/v1",
